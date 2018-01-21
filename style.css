@@ -8,12 +8,12 @@ body {
 }
 
 #passbox {
-	width: 50%;
+	width: 30%;
 	height: 44%;
 	background-color: #eee;
 	position: fixed;
 	top: 28%;
-	left: 25%;
+	left: 35%;
 	text-align: center;
 	border-radius: 10px;
 	font-family: 'Bad Script';
@@ -22,10 +22,9 @@ body {
 
 input:not([type=submit]):not([type=file]) {
 	position: relative;	
-	top: 10%;
 	width: 60%;
 	height: 25%;
-	border-radius: 4px;
+	border-radius: 6px;
 	border: 2px #ddd solid;
 	background-color: #f0f0f0;
 
@@ -34,6 +33,7 @@ input:not([type=submit]):not([type=file]) {
 #password {
 	text-align: center;
 	font-size: 36px;
+	top: 15%;
 }
 
 #pass_title{

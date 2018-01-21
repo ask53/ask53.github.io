@@ -13,10 +13,12 @@ function enter_pressed(e) {
 		var el = document.getElementById('password');
 		
 		if (passwordIsCorrect()) {
-			flashInput(el);
-		} else {
-			flashInput(el);
+			flashInput(el, GREEN, GREEN_FADE_TIME);
 			clearInput(el);
+		} else {
+			clearInput(el);
+			flashInput(el, RED, RED_FADE_TIME);
+			
 		}
 	} else {					// password box is closed
 		alert('nahhhhh');
@@ -34,7 +36,15 @@ function passwordIsCorrect() {
 	}
 }
 
-function flashInput(el, color) {
+function flashInput(el, color, t) {
 	// Animates the flashing of an input box a certain color,
 	//	then fades back to its original color
+	el.style.backgroundColor = color;
+	$(el).animate({
+		backgroundColor: BACKGROUND
+	}, t);
+}
+
+function clearInput(el) {
+	el.value = "";
 }
