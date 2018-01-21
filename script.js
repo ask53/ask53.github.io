@@ -15,6 +15,9 @@ function enter_pressed(e) {
 		if (passwordIsCorrect()) {
 			flashInput(el, GREEN, GREEN_FADE_TIME);
 			clearInput(el);
+			setTimeout(function() {	// yes, i know how ridiculous this is
+				removePassbox();
+			}, GREEN_FADE_TIME);				
 		} else {
 			clearInput(el);
 			flashInput(el, RED, RED_FADE_TIME);
@@ -25,16 +28,6 @@ function enter_pressed(e) {
 	}
 }
 
-function passwordIsCorrect() {
-	var newhash = hex_md5(document.getElementById('password').value);
-	console.log(newhash+", "+HASHED);
-	
-	if (newhash == HASHED) {
-		return true;
-	} else {
-		return false;
-	}
-}
 
 function flashInput(el, color, t) {
 	// Animates the flashing of an input box a certain color,
@@ -47,4 +40,19 @@ function flashInput(el, color, t) {
 
 function clearInput(el) {
 	el.value = "";
+}
+
+function passwordIsCorrect() {
+	var newhash = hex_md5(document.getElementById('password').value);
+	console.log(newhash+", "+HASHED);
+	if (newhash == HASHED) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+function removePassbox() {	// yes, i know how ridiculous this is, please relax, everybody.
+	document.getElementById('invisible_passbox').style.display = 'none';
+	PASSWORD_BOX = false; 
 }
