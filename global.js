@@ -7,7 +7,7 @@ var PASSWORD_BOX = true;
 
 var RED = "#fc3232";
 var GREEN = "#7aef7c";
-var BACKGROUND = "#eee";
+var BACKGROUND = "#fff";
 
 var RED_FADE_TIME = 1500;
 var GREEN_FADE_TIME = 1500;

@@ -5,7 +5,7 @@ body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	background-image: url("background.jpg");
+	background-image: url("background1.png");
 	background-size: 100%;
 }
 
@@ -23,7 +23,7 @@ body {
 #passbox {
 	width: 30%;
 	height: 44%;
-	background-color: #eee;
+	background-color: #fff;
 	position: fixed;
 	top: 28%;
 	left: 35%;
@@ -39,7 +39,7 @@ input:not([type=submit]):not([type=file]) {
 	height: 25%;
 	border-radius: 6px;
 	border: 2px #ddd solid;
-	background-color: #f0f0f0;
+	background-color: #fff;
 
 }
 
